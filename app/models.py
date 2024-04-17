@@ -27,7 +27,7 @@ class User(db.Model, UserMixin):
     sms_code = db.Column(db.String(4), nullable=False)
 
     def __repr__(self) -> str:
-        return '<User %r>' % self.description
+        return '<User %r>' % self.login
 
 class Ticket(db.Model):
 
@@ -46,4 +46,4 @@ class Ticket(db.Model):
 
 
     def __repr__(self) -> str:
-        return '<Performance %r>' % self.description
+        return '<Ticket %r>' % self.place

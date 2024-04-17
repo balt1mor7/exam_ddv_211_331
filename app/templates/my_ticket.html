@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    {% if ticket %}
+    <div class="mt-4">
+        <h3>Название пьесы</h3>
+        <p>{{ ticket.performance.name }}</p>
+    </div>
+    <div class="mt-4">
+        <h3>Сектор</h3>
+        <p>{{ ticket.sector }}</p>
+    </div>
+    <div class="mt-4">
+        <h3>Место</h3>
+        <p>{{ ticket.place }}</p>
+    </div>
+    <div class="mt-4">
+        <h3>Время</h3>
+        <p>{{ ticket.time }}</p>
+    </div>
+    {% else %}
+    билет не найден
+    {% endif %}
+</div>
+{% endblock %}

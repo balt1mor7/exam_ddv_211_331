@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<div class="mt-5">
+    <table class="table table-striped">
+        <thead>
+            <tr class="table-dark">
+                <th scope="col">№</th>
+                <th scope="col">Название пьесы</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if performances %}
+            {% for performance in performances %}
+            <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{performance.name}}</td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            В настоящий момент пьес нет
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+</div>
+{% endblock %}
