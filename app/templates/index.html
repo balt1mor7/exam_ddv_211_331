@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="mt-5 d-flex flex-column">
+        <a href="{{ url_for('performance') }}" class="btn btn-primary">Получить информацию об идущих пьесах</a>
+        <a href="{{ url_for('my_ticket') }}" class="btn btn-primary mt-3">Получить информацию по билету</a>
+    </div>
+</div>
+{% endblock %}
